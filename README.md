@@ -1,2 +1,4 @@
-# data-structures-and-algorithms
-Code 301 Code Challenges
+### Code 301 Pair-Programming Code Challenges
+
+*This repository will have branches for daily code challenges.*
+
