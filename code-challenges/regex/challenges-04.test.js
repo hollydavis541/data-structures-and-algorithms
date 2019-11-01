@@ -26,7 +26,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /[A-Z][a-z]*/g
+  if (regex.test(str) === false) {
+    return []
+  } else {
+    return str.match(regex)
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
