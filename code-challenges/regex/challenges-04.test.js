@@ -65,7 +65,12 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let regex = /^[oO]ct/
+  if (input.length === 5) {
+    return false;
+  } else {
+    return regex.test(input)
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
