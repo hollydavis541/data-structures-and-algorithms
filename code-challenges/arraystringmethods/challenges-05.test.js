@@ -77,7 +77,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for (var i = 0; i < recipe.ingredients.length; i++) {
+    // try to figure out how to vary where it slices each time
+    result.push(recipe.ingredients[i].slice(10))
+  }
   return result;
 };
 
@@ -107,7 +110,11 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  // Credit https://stackoverflow.com/questions/18558417/get-first-word-of-string
+  for (var i = 0; i < recipe.steps.length; i++) {
+    var words = recipe.steps[i].split(' ');
+    result.push(words[0]);
+  }
   return result;
 };
 
