@@ -15,7 +15,7 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (var i = 0; i <= str.length; i++) {
+  for (let i = 0; i <= str.length; i++) {
     result.push(str.slice(i))
   }
   return result;
@@ -94,9 +94,17 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    let answer =  recipe.ingredients[i].split(' ');
+    // Credit Jeff Lawrence
+    answer.splice(0, 2);
+    let newString = answer.join();
+    newString = newString.replace(/,/g, ' ');
+    result.push(newString);
+  }
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -111,8 +119,8 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Credit https://stackoverflow.com/questions/18558417/get-first-word-of-string
-  for (var i = 0; i < recipe.steps.length; i++) {
-    var words = recipe.steps[i].split(' ');
+  for (let i = 0; i < recipe.steps.length; i++) {
+    let words = recipe.steps[i].split(' ');
     result.push(words[0]);
   }
   return result;
