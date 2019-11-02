@@ -74,12 +74,12 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
   let result = [];
-  for (var i = 0; i < recipe.ingredients.length; i++) {
-    // try to figure out how to vary where it slices each time
-    result.push(recipe.ingredients[i].slice(10))
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    // Credit to Jeff Lawrence for the indexOf parameters
+    const list = recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ', 4)); // I don't understand why this needs to be 4 and not 2
+    result.push(list.slice(1)); // makes each list item a separate array item
   }
   return result;
 };
