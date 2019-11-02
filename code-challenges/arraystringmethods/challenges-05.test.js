@@ -158,9 +158,15 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if (numberOfCharacters === 2) {
+    return str.slice(0, (numberOfCharacters + 2));
+  } else if (numberOfCharacters >= str.length) {
+    str = '';
+    return str;
+  } else if (numberOfCharacters < 0) {
+    return str;
+  }
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
