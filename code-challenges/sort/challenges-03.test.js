@@ -104,8 +104,14 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
-};
+  for (let i = 0; i < arr.length; i++) {
+    arr.sort((a, b) => {
+      if (a.lastName < b.lastName) return -1;
+      if (a.lastName > b.lastName) return 1;
+    })
+  }
+  return arr
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
