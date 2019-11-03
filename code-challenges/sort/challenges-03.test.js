@@ -70,7 +70,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   return arr.sort((a, b) => a.price - b.price)
-};
+}; 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
