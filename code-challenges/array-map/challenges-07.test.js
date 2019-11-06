@@ -10,13 +10,13 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
-const forLoopTwoToThe = (arr) => {
+const forLoopTwoToThe = arr => {
   const newArr = []
   for (let i = 0; i < arr.length; i++) {
     newArr.push(Math.pow(2, arr[i]))
   }
   return newArr
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -24,9 +24,11 @@ CHALLENGE 2
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
-const forEachTwoToThe = (arr) => {
-  // Solution code here...
-};
+const forEachTwoToThe = arr => {
+  const newArr = []
+  arr.forEach( value => newArr.push(Math.pow(2, value)))
+  return newArr
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
