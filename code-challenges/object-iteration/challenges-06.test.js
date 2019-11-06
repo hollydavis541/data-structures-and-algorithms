@@ -10,7 +10,7 @@ For example: (['name', 'duration', 'topics', 'finalExam']).
 const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
-};
+}
 
 const getCourseKeys = (obj) => Object.keys(obj)
 
@@ -72,7 +72,7 @@ const getHouses = (arr) => {
     houses.push(value.house)
   })
   return houses;
-};
+}
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -118,7 +118,7 @@ const hasChildrenEntries = (arr, character) => {
     })
   })
   return children;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -134,7 +134,7 @@ const totalCharacters = (arr) => {
     count += value.children.length;
   })
   return count
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -148,9 +148,17 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+  Object.values(arr).forEach(person =>{
+    let sum = 1;
+    if (person.spouse) sum++;
+    person.children.forEach( () => sum++);
+    sizes.push({
+      house: person.house,
+      members: sum
+    })
+  })
   return sizes;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
