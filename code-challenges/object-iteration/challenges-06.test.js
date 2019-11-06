@@ -12,9 +12,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  return Object.keys(obj)
-};
+const getCourseKeys = (obj) => Object.keys(obj)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -111,7 +109,15 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let children = 0;
+  Object.entries(arr).forEach( value => {
+    value.forEach( person => {
+      if (person.name === character) {
+        children = person.children.length > 0? true : false;
+      }
+    })
+  })
+  return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
