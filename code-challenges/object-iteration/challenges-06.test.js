@@ -10,11 +10,9 @@ For example: (['name', 'duration', 'topics', 'finalExam']).
 const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
-};
+}
 
-const getCourseKeys = (obj) => {
-  return Object.keys(obj)
-};
+const getCourseKeys = (obj) => Object.keys(obj)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -74,7 +72,7 @@ const getHouses = (arr) => {
     houses.push(value.house)
   })
   return houses;
-};
+}
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -111,8 +109,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
-};
+  let children = 0;
+  Object.entries(arr).forEach( value => {
+    value.forEach( person => {
+      if (person.name === character) {
+        children = person.children.length > 0? true : false;
+      }
+    })
+  })
+  return children;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -121,8 +127,14 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
-};
+  let count = 0;
+  Object.values(arr).forEach( value => {
+    count++;
+    if(value.spouse) count++;
+    count += value.children.length;
+  })
+  return count
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -136,9 +148,17 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+  Object.values(arr).forEach(person =>{
+    let sum = 1;
+    if (person.spouse) sum++;
+    person.children.forEach( () => sum++);
+    sizes.push({
+      house: person.house,
+      members: sum
+    })
+  })
   return sizes;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
