@@ -126,8 +126,10 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
-};
+  const newArr = []
+  arr.map( value => newArr.push(value.ability.name))
+  return newArr
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -173,8 +175,11 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
-};
+  return arr.map(item => ({
+    name: item.stat.name,
+    total: item.effort + item.baseStat,
+  }));
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
