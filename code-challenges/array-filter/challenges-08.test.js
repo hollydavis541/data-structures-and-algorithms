@@ -170,7 +170,11 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  const newArr = [];
+  arr.filter( value => {
+    if (!value.children) newArr.push(value);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
