@@ -85,7 +85,8 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  const reverse = str.split('').reduce( (acc, cur) => cur + acc);
+  return reverse;
 };
 
 /* ------------------------------------------------------------------------------------------------
