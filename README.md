@@ -20,4 +20,5 @@
 
 [Code Challenge 08: Filter](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/array-filter/challenges-08.test.js) 
 
+[Code Challenge 09: Reduce](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/array-reduce/challenges-09.test.js) 
 
