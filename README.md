@@ -22,3 +22,4 @@
 
 [Code Challenge 09: Reduce](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/array-reduce/challenges-09.test.js) 
 
+[Code Challenge 10: Chaining](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/chaining/challenges-10.test.js) 
