@@ -23,3 +23,7 @@
 [Code Challenge 09: Reduce](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/array-reduce/challenges-09.test.js) 
 
 [Code Challenge 10: Chaining](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/chaining/challenges-10.test.js) 
+
+[Code Challenge 11: Regex 2](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/regexp2/challenges-11.test.js) 
+
+[Code Challenge 12: Nested For Loops](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/nested-for-loops/challenges-12.test.js) 
