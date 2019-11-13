@@ -23,15 +23,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let total = [];
+  let hourlySales = [];
   for (let i = 0; i < stores[0].length; i++) {
     let sum = 0;
     for (let j = 0; j < stores.length; j++) {
       sum += stores[j][i];
     }
-    total.push(sum);
+    hourlySales.push(sum);
   }
-  return total;
+  return hourlySales;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +45,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let newArray = [];
+  data.forEach( (currentValue, index) => {
+    let salesObject = {
+      sales: currentValue + ' cookies',
+      time: hours[index]
+    };
+    newArray.push(salesObject);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
