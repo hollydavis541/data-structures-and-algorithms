@@ -75,7 +75,15 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let treats = 0;
+  arr.forEach( currentValue => {
+    currentValue.items.forEach( curval => {
+      if(curval.name === 'Treats') {
+        treats = curval.quantity;
+      }
+    });
+  });
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
