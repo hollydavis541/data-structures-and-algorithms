@@ -38,7 +38,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  const newArr = [];
+  arr.forEach(str => {
+    // Credit to Jeff Lawrence for putting all the substrings into a template literal as an argument for the push function
+    newArr.push(`${str.substring(1, 4)}${str.substring(6, 9)}${str.substring(10, 14)}`)
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
