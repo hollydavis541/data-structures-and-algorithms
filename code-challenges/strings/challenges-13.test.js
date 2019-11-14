@@ -7,7 +7,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  let newArr = []
+  const newArr = []
   arr.forEach(str => {
     let letter = str.charAt(0);
     newArr.push(letter)
@@ -22,7 +22,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  const newArr = []
+  arr.forEach(str => {
+    if (str.includes(':)')) {
+      newArr.push(str);
+    }
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
