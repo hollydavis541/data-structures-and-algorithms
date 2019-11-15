@@ -27,3 +27,7 @@
 [Code Challenge 11: Regex 2](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/regexp2/challenges-11.test.js) 
 
 [Code Challenge 12: Nested For Loops](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/nested-for-loops/challenges-12.test.js) 
+
+[Code Challenge 13: String Manipulation](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/strings/challenges-13.test.js) 
+
+[Code Challenge 14: Review](https://github.com/hollydavis541/data-structures-and-algorithms/blob/master/code-challenges/review/challenges-14.test.js) 
