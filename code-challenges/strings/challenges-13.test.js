@@ -110,8 +110,23 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
-};
+  let boolean = false;
+  let newArr = []
+  arr.forEach(el => {
+    if (el.includes(target)) {
+      newArr.push(true);
+    } else {
+      newArr.push(false);
+    }
+  })
+  if (newArr.includes(false)) {
+    boolean = false;
+    return boolean;
+  } else {
+    boolean = true;
+    return boolean;
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
