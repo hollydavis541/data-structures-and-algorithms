@@ -125,7 +125,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let product = 1;
+  numbers.forEach(element => {
+    element.forEach(el => {
+      product *= el;
+    });
+  });
+  return product
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,7 +151,13 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let average = 0;
+  weather.forEach(element => {
+    element.forEach(el => {
+      average += el
+    })
+  })
+  return average / 28;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -166,7 +178,17 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let lowestAvg = 150;
+  weather.forEach(element => {
+    let average = 0;
+    for(var i = 0; i < element.length; i++){
+      average += element[i];
+    }
+    if(lowestAvg > average / element.length){
+      lowestAvg = average / element.length;
+    }
+  });
+  return lowestAvg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -182,7 +204,18 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  const sums = [];
+  const rows = str.split('\n');
+  rows.forEach( row => {
+    let sum = 0;
+    const cols = row.split(',');
+    cols.forEach( col => {
+      const num = parseInt(col);
+      sum += num;
+    })
+    sums.push(sum);
+  })
+  return sums;
 };
 
 /* ------------------------------------------------------------------------------------------------
